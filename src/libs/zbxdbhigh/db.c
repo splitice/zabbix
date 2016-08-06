@@ -2021,7 +2021,7 @@ int	zbx_db_insert_execute(zbx_db_insert_t *self)
 
 	/* create sql insert statement command */
 
-	zbx_strcpy_alloc(&sql_command, &sql_command_alloc, &sql_command_offset, "insert into ");
+	zbx_strcpy_alloc(&sql_command, &sql_command_alloc, &sql_command_offset, "insert IGNORE into ");
 	zbx_strcpy_alloc(&sql_command, &sql_command_alloc, &sql_command_offset, self->table->table);
 	zbx_chrcpy_alloc(&sql_command, &sql_command_alloc, &sql_command_offset, ' ');
 
